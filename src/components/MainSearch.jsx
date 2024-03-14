@@ -13,7 +13,7 @@ import React from "react";
       aria-label="Search"
       aria-describedby="button-addon2" />
 
-    <!--Search icon-->
+
     <span
       className="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 dark:text-white [&>svg]:w-5"
       id="basic-addon2">
