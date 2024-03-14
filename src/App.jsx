@@ -1,14 +1,16 @@
-
 // insert the import modules here
-
+import Header from "./components/Header";
+import Navbar from "./components/navbar";
+import "./index.css"
 
 function App() {
-
   return (
     <>
-{/* insert components here */}
+      <Navbar />
+      <Header />
+      <MainSearch />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
