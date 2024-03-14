@@ -1,4 +1,5 @@
 import React from "react";
+import Users from "../../assets/users.json"
 
 function Footer() {
   return (
@@ -11,72 +12,13 @@ function Footer() {
         </div>
 
         <div>
-          <div className="grid gap-6 text-center md:grid-cols-6 lg:gap-12">
-
-            <div className="mb-12 md:mb-0">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
-                  className="w-32 rounded-full shadow-lg dark:shadow-black/30"
-                />
-              </div>
-              <h5 className="mb-4 text-xl font-semibold text-white">Maria Smantha</h5>
-            </div>
-
-
-            <div className="mb-12 md:mb-0">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
-                  className="w-32 rounded-full shadow-lg dark:shadow-black/30"
-                />
-              </div>
-              <h5 className="mb-4 text-xl font-semibold text-white">Lisa Cudrow</h5>
-            </div>
-
-            
-            <div className="mb-0">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
-                  className="w-32 rounded-full shadow-lg dark:shadow-black/30"
-                />
-              </div>
-              <h5 className="mb-4 text-xl font-semibold text-white">John Smith</h5>
-            </div>
-
-            <div className="mb-0">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
-                  className="w-32 rounded-full shadow-lg dark:shadow-black/30"
-                />
-              </div>
-              <h5 className="mb-4 text-xl font-semibold text-white">John Smith</h5>
-            </div>
-
-            <div className="mb-0">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
-                  className="w-32 rounded-full shadow-lg dark:shadow-black/30"
-                />
-              </div>
-              <h5 className="mb-4 text-xl font-semibold text-white">John Smith</h5>
-            </div>
-
-            <div className="mb-0">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
-                  className="w-32 rounded-full shadow-lg dark:shadow-black/30"
-                />
-              </div>
-              <h5 className="mb-4 text-xl font-semibold text-white">John Smith</h5>
-            </div>
+          <div className="flex gap-4 justify-evenly">
+            {Users.map((user) => (
+              <FooterUserCard imgSrc={user.imgSrc} name={user.name} />
+            ))}
           </div>
 
-          <div className="text-white flex justify-center">
+          <div className="text-white flex justify-center py-6">
                 <h2>2024</h2>
             </div>
             
@@ -87,5 +29,20 @@ function Footer() {
   );
 }
 
+export const FooterUserCard = ({imgSrc, name}) => {
+  return (
+    <div className="mb-0">
+      <div className="mb-6 flex justify-center">
+        <img
+          src={imgSrc}
+          className="w-32 rounded-full shadow-lg dark:shadow-black/30"
+        />
+      </div>
+      <h5 className="mb-4 text-xl font-semibold text-white">{name}</h5>
+    </div>
+  )
+}
+
 export default Footer;
+
 
