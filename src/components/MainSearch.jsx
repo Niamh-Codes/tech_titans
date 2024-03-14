@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainSearch.css"
-import "./MainSearch.js"
+
 
  function MainSearch () {
     return (
@@ -35,6 +35,6 @@ import "./MainSearch.js"
 </nav>
       </>
     )
-  }
+  };
 
-  export default MainSearch;
+export default MainSearch;
