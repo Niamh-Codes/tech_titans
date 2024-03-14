@@ -5,7 +5,11 @@ export default {
     "./src/components/**/*.{js,jsx,html}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customOrange: '#E4CE77',
+      },
+    },
     backgroundColor: theme => ({
       ...theme('colors'),
       'green-custom': '#788475',
@@ -16,4 +20,3 @@ export default {
   },
   plugins: [],
 }
-

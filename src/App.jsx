@@ -4,6 +4,8 @@ import Navbar from "./components/navbar";
 import MainSearch from "./components/MainSearch";
 import Footer from "./components/Footer";
 import Quiz from "./components/Quiz"; 
+import AnswerCard from "./components/AnswerCard";
+
 import "./index.css"
 
 function App() {
@@ -13,6 +15,9 @@ function App() {
       <Header />
       <MainSearch />
       <Quiz />
+      <AnswerCard />
+      <AnswerCard />
+      <AnswerCard />
       <Footer />
           </>
   );
