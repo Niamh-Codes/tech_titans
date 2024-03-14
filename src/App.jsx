@@ -1,14 +1,23 @@
-
 // insert the import modules here
-
+import Header from "./components/Header";
+import Navbar from "./components/navbar";
+import MainSearch from "./components/MainSearch";
+import Footer from "./components/Footer";
+import Quiz from "./components/Quiz"; 
+import FlipCard from "./components/FlipCard";
+import "./index.css"
 
 function App() {
-
   return (
     <>
-{/* insert components here */}
-    </>
-  )
+      <Navbar />
+      <Header />
+      <MainSearch />
+      <Quiz />
+      <FlipCard />
+      <Footer />
+          </>
+  );
 }
 
-export default App
+export default App;
