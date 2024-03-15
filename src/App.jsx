@@ -4,7 +4,6 @@ import {Navbar} from "./components/navbar";
 import MainSearch from "./components/MainSearch";
 import Footer from "./components/Footer";
 import Quiz from "./components/Quiz";
-import AnswerSection from "./components/AnswerSection";
 import Divider from "./components/divider";
 
 import "./index.css";
@@ -17,7 +16,6 @@ function App() {
       <MainSearch />
       <Divider />
       <Quiz />
-      <AnswerSection />
       <Divider />
       <Footer />
     </>

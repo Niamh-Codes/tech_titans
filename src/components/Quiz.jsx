@@ -1,4 +1,5 @@
 import React from "react";  
+import AnswerCard from "./AnswerCard";
 
  function Quiz() {
     return (
@@ -13,6 +14,11 @@ import React from "react";
     <h5 className="mb-2 text-xl font-medium leading-tight">Question here</h5>
   </div>
 </div>
+<div className="answer-section flex justify-center space-x-5 ">
+      <AnswerCard />
+      <AnswerCard />
+      <AnswerCard />
+    </div>
         </>
     );
 }
