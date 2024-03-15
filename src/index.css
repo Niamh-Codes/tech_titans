@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(71, 33, 33, 0.87);
+  background-color: #1b1914;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,7 +18,7 @@
 }
 
 a {
-  font-weight: 500;
+  font-weight: 400;
   color: #646cff;
   text-decoration: inherit;
 }
@@ -33,12 +33,18 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  width: 100vw;
+  width: auto;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 3;;
+}
+
+p {
+  font-size: 50px;
+  line-height: normal;
 }
 
 button {
@@ -75,4 +81,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.bg-body {
+  background-color: #14110a;
 }
