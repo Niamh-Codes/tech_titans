@@ -18,6 +18,7 @@ import AnswerCard from "./AnswerCard";
       <AnswerCard />
       <AnswerCard />
       <AnswerCard />
+      <AnswerCard />
     </div>
         </>
     );
