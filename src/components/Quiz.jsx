@@ -5,7 +5,7 @@ import AnswerCard from "./AnswerCard";
     return (
         <>
 
-            <div style={{ backgroundColor: '#1B1914'}}
+            <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }}
   className="block rounded-lg shadow-secondary-1 dark:bg-surface-dark">
   <a href="#!">
   </a>

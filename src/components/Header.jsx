@@ -3,7 +3,7 @@ import React from 'react';
 
 function Header() {
   return (
-    <div className="p-6 h-screen flex-wrap bg-body">
+    <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="p-6 h-screen flex-wrap bg-body">
       <h1 className="mb-5 text-customOrange">HELLO CURIO</h1>
         <div className="mb-5 text-7xl  text-white">Uncover global charm: Greet the world's quirks!</div>
 
