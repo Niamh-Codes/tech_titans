@@ -1,11 +1,5 @@
-import React from 'react'
 
-function navbar() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+export const Navbar = () => {
+    //  Navbar component implementation
+};
 
-export default navbar

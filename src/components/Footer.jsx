@@ -1,3 +1,4 @@
+
 import React from "react";
 import Users from "../../assets/users.json"
 
@@ -44,5 +45,4 @@ export const FooterUserCard = ({imgSrc, name}) => {
 }
 
 export default Footer;
-
 
