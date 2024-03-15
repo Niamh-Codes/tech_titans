@@ -1,5 +1,6 @@
 import React from "react";  
 import AnswerCard from "./AnswerCard";
+import QuizCards from "./QuizCards";
 
  function Quiz() {
     return (
@@ -11,14 +12,14 @@ import AnswerCard from "./AnswerCard";
   </a>
     <h1>Quizio</h1>
   <div className="p-6 text-surface dark:text-white">
-    <h5 className="mb-2 text-xl font-medium leading-tight">Question here</h5>
+    <h2 className="mb-2 text-xl font-medium leading-tight flex justify-center">Question here</h2>
   </div>
 </div>
 <div style={{ backgroundColor: '#1B1914'}}className="answer-section flex justify-center space-x-5">
-      <AnswerCard />
-      <AnswerCard />
-      <AnswerCard />
-      <AnswerCard />
+      <QuizCards />
+      <QuizCards />
+      <QuizCards />
+      <QuizCards />
     </div>
         </>
     );
