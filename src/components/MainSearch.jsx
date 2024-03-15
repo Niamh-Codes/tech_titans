@@ -9,7 +9,7 @@ import "./MainSearch.css"
         <nav style={{ backgroundColor: '#1B1914', color: '#FFB53A' }}id="search-div" className="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4">
           <div className="ms-5 flex w-[30%] items-center justify-between">
             <input
-              type="search"
+              type="search" style={{backgroundColor: '#1B1914', color: '#FFB53A'}}
               className="main-search relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:bg-body-dark dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill"
               placeholder="Search"
               aria-label="Search"
