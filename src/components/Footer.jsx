@@ -5,7 +5,7 @@ import Users from "../../assets/users.json"
 function Footer() {
   return (
     <>
-      <footer className="bg-green-custom h-82">
+      <footer style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-green-custom h-82">
         <div className="pt-14 pl-14">
           <div className="pb-8">
             <h2 className="text-white">HelloCurio is designed by</h2>
