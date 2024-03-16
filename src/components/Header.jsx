@@ -7,7 +7,9 @@ function Header() {
       <h1 className="mb-5">HELLO CURIO</h1>
         <div className="mb-5 text-7xl  text-white relative flex w-full">Uncover global charm: Greet the world's quirks!</div>
 
-        <div className="h-0.5 bg-neutral-100 dark:bg-white/10 w-4/12 md:w-3/12 lg:w-2/12 mb-5 self-start"></div>
+        <hr className="border-t-0.5 border-neutral-100 dark:border-white/10 w-2/3 md:w-3/12 lg:w-2/12 mb-5 self-start" />
+
+
 
         
             <p className="mb-5 text-white relative flex w-full">
