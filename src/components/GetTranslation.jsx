@@ -462,22 +462,22 @@ const CountryData1 = () => {
     };
 
 return (
-  <div className="flex flex-col items-center justify-center h-screen">
-    <div className="h-30vh flex flex-col items-center justify-center space-y-4">
-      <input className="w-3/4" type="text" id="main-search" />
-      <button onClick={() => getCountryData(document.querySelector('#main-search').value)}>Search</button>
-    </div>
-    <div id="helloContainer" className="w-full space-y-4">
-      {matchedLanguages.map((match) => (
-        <div key={match.language} className="card flex items-center justify-center">
-          <div className="card-body">
-            <h5 className="card-title">{match.language}</h5>
-            <p className="card-text">Hello, {match.hello}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+<div id="searchrow" className="flex flex-col items-center justify-center">
+  <div className=" flex items-center justify-center"> {/* Change flex-col to flex */}
+    <input className=" h-12 w-64 rounded-l-lg border-r-0 pl-4" type="text" id="main-search" placeholder="Type your country here..." /> 
+    <button className="h-12 w-16 rounded-l-none rounded-r-lg h-full" onClick={() => getCountryData(document.querySelector('#main-search').value)}></button>
   </div>
+  <div id="helloContainer" className="w-full space-y-4 flex flex-wrap"> {/* Add flex-wrap to allow elements to wrap */}
+    {matchedLanguages.map((match) => (
+      <div key={match.language} className="card flex items-center justify-center">
+        <div className="card-body">
+          <h5 className="card-title">{match.language}</h5>
+          <p className="card-text">Hello, {match.hello}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 );
       }
 
