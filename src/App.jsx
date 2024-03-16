@@ -1,5 +1,5 @@
 // insert the import modules here
-import navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { motion } from 'framer-motion'; 
 import Header from "./components/Header";
 import MainSearch from "./components/MainSearch";
@@ -13,7 +13,7 @@ import "./index.css";
 function App() {
   return (
     <>
-      <navbar />
+      <Navbar />
       <Header />
       <MainSearch />
       <Divider />
