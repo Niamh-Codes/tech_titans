@@ -8,7 +8,7 @@ function Header() {
 
       {/* Container for left content */}
       <div className="w-1/2 pr-2">
-        <p className="mb-2 text-white">
+        <p className="mb-3 text-white">
           Delve into captivating country trivia and fascinating facts, while mastering the art of greeting in diverse local languages.
         </p>
       </div>
