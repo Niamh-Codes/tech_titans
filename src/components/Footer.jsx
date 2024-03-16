@@ -13,7 +13,7 @@ function Footer() {
         </div>
 
         <div>
-          <div className="flex gap-4 justify-evenly">
+          <div className="flex gap-4 justify-evenly relative flex w-full">
             {Users.map((user) => (
               <FooterUserCard imgSrc={user.imgSrc} name={user.name} />
             ))}
