@@ -31,10 +31,12 @@ function MainSearch() {
           </button>
         </div>
       </nav>
+      <div className="answer-section flex justify-center space-x-5">
       <AnswerCard />
       <AnswerCard />
       <AnswerCard />
       <AnswerCard />
+      </div>
     </>
   );
 }
