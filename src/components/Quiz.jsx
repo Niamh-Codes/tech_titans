@@ -5,7 +5,7 @@ import QuizCards from "./QuizCards";
 function Quiz() {
   return (
     <>
-      <div className="bg-gray-900 text-yellow-500 block rounded-lg shadow-lg dark:bg-surface-dark p-4">
+      <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg shadow-lg dark:bg-surface-dark p-4">
         <a href="#!"></a>
         <h1 className="text-3xl lg:text-5xl font-bold text-center">Quizio</h1>
         <div className="p-6 text-surface dark:text-white">

@@ -4,7 +4,7 @@ import Users from "../../assets/users.json";
 function Footer() {
   return (
     <>
-      <footer className="bg-gray-900 text-yellow-500 h-82">
+      <footer style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 h-82">
         <div className="pt-14 pl-14">
           <div className="pb-8">
             <h2>HelloCurio is designed by</h2>
@@ -27,7 +27,7 @@ function Footer() {
 
 export const FooterUserCard = ({ imgSrc, name }) => {
   return (
-    <div className="mb-4 lg:mb-0">
+    <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="mb-4 lg:mb-0">
       <div className="mb-6 flex justify-center">
         <img
           src={imgSrc}
