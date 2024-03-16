@@ -20,10 +20,6 @@ function MainSearch() {
       
       <div className="answer-section flex justify-center space-x-5 relative flex w-full">
         <AnswerCard />
-        <AnswerCard />
-        <AnswerCard />
-        <AnswerCard />
-
       </div>
     </>
   );
