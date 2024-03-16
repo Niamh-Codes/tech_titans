@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar() {
+function navbar() {
     return (
         <>
             <nav className="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4">
@@ -42,4 +42,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default navbar;
