@@ -5,10 +5,10 @@ import Users from "../../assets/users.json"
 function Footer() {
   return (
     <>
-      <footer style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-green-custom h-82">
+      <footer style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="h-82">
         <div className="pt-14 pl-14">
           <div className="pb-8">
-            <h2 className="text-white">HelloCurio is designed by</h2>
+            <h2>HelloCurio is designed by</h2>
           </div>
         </div>
 
@@ -19,7 +19,7 @@ function Footer() {
             ))}
           </div>
 
-          <div className="text-white flex justify-center py-6">
+          <div className="flex justify-center py-6">
                 <h2>2024</h2>
             </div>
             
@@ -39,7 +39,7 @@ export const FooterUserCard = ({imgSrc, name}) => {
           className="w-32 rounded-full shadow-lg dark:shadow-black/30"
         />
       </div>
-      <h5 className="mb-4 text-xl font-semibold text-white">{name}</h5>
+      <h5 className="mb-4 text-xl font-semibold">{name}</h5>
     </div>
   )
 }
