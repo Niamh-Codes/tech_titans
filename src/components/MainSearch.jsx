@@ -23,6 +23,7 @@ function MainSearch() {
         <AnswerCard />
         <AnswerCard />
         <AnswerCard />
+
       </div>
     </>
   );
