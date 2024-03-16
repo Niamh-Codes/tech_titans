@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Quiz from "./components/Quiz";
 import Divider from "./components/Divider";
 
+
 import "./index.css";
 
 function App() {
