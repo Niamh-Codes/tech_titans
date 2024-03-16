@@ -31,7 +31,7 @@ function MainSearch() {
           </button>
         </div>
       </nav>
-      <div className="answer-section flex justify-center space-x-5">
+      <div className="answer-section flex justify-center space-x-5 relative flex w-full">
       <AnswerCard />
       <AnswerCard />
       <AnswerCard />
