@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CountryData = () => {
+const CountryData1 = () => {
     const [matchedLanguages, setMatchedLanguages] = useState([]);
 
     const getCountryData = (countryName) => {
@@ -15,7 +15,7 @@ const CountryData = () => {
                 }
             })
             .then(data => {
-                const countryData = {
+                const countryData1 = {
                     Name: data[0].name.common,
                     Capital: data[0].capital[0],
                     Population: data[0].population,
@@ -24,7 +24,7 @@ const CountryData = () => {
                     Languages: Object.values(data[0].languages).join(', ')
                 };
 
-                const languages = countryData.Languages.split(', ');
+                const languages = countryData1.Languages.split(', ');
 
 
 
@@ -481,4 +481,4 @@ return (
 );
       }
 
-export default CountryData; // Export the CountryData component
+export default CountryData1; // Export the CountryData1 component
