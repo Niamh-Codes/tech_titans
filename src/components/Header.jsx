@@ -7,7 +7,8 @@ function Header() {
       <h1 className="mb-5">HELLO CURIO</h1>
         <div className="mb-5 text-7xl  text-white relative flex w-full">Uncover global charm: Greet the world's quirks!</div>
 
-        <div className="h-0.5 bg-neutral-100 dark:bg-white/10 mx-auto w-4/12 content-start relative flex w-full"></div>
+        <div className="h-0.5 bg-neutral-100 dark:bg-white/10 w-4/12 md:w-3/12 lg:w-2/12 mb-5 self-start"></div>
+
         
             <p className="mb-5 text-white relative flex w-full">
         Delve into captivating country trivia and fascinating facts, while mastering the art of greeting in diverse local languages.
