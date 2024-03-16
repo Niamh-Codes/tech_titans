@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Niamh Alexander",
+        "imgSrc": "./assets/niamh.png",
+        "githubLink": "https://github.com/Niamh-Codes"
+    },
+    {
+        "name": "Krystle Murphy",
+        "imgSrc": "./assets/krystle.png",
+        "githubLink": "https://github.com/KrystleMurphy"
+    },
+    {
+        "name": "Prince Nkosinathi",
+        "imgSrc": "./assets/prince.png",
+        "githubLink": "https://github.com/HIYASHE06"
+    },
+    {
+        "name": "Yaseen Fehad",
+        "imgSrc": "./assets/yaseen.png",
+        "githubLink": "https://github.com/yasfeh12"
+    },
+    {
+        "name": "Darrol Martin",
+        "imgSrc": "./assets/darrol.png",
+        "githubLink": "https://github.com/DarrolMartin"
+    },
+    {
+        "name": "Isabel Toledano",
+        "imgSrc": "./assets/isabel.png",
+        "githubLink": "https://github.com/eesahbella"
+    }
+
+]
