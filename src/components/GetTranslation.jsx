@@ -464,7 +464,10 @@ const CountryData1 = () => {
 return (
 <div id="searchrow" className="text-customOrange bg-body flex flex-col items-center justify-center">
   <div className=" flex items-center justify-center"> {/* Change flex-col to flex */}
-    <input className="mt-10 h-12 w-64 rounded-l-lg border-r-0 pl-4" type="text" id="main-search" placeholder="Type your country here..." /> 
+    <input className="mt-10 h-12 w-64 rounded-l-lg border-r-0 pl-4" type="text" id="main-search" placeholder="Type your country here..." onKeyPress={(event) => {
+                    if (event.key === 'Enter') {
+                        getCountryData(document.querySelector('#main-search').value);
+                    }}} /> 
     <button className="text-black mt-10 h-12 w-16 bg-customOrange rounded-l-none rounded-r-lg h-full" onClick={() => getCountryData(document.querySelector('#main-search').value)}></button>
   </div>
   <div id="helloContainer" className="justify-center mt-10 mb-10 text-customOrange bg-body w-full space-y-4 flex flex-wrap"> {/* Add flex-wrap to allow elements to wrap */}
