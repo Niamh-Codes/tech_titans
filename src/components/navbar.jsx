@@ -3,7 +3,7 @@ import React from "react";
 function Navbar() {
   return (
     <>
-      <nav style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className=" py-2 lg:py-4 shadow-md dark:bg-neutral-700">
+      <nav className="text-customOrange bg-body py-2 lg:py-4 shadow-md dark:bg-neutral-700">
         <div className="container mx-auto px-3 lg:px-0 flex items-center justify-between">
           <span className="text-xl lg:text-2xl ml-8">*</span>
           <div className="flex w-full lg:w-1/3 items-center justify-between">
