@@ -9,7 +9,7 @@ function MainSearch() {
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 justify-center">
       <GetTranslation />
             <div className="answer-section flex justify-center space-x-5">
-              <AnswerCard />
+              {/* <AnswerCard /> */}
             </div>
         </div>
       </div>
