@@ -474,8 +474,8 @@ return (
     {matchedLanguages.map((match) => (
       <div key={match.language} className="card flex items-center justify-center">
         <div className="card-body">
-          <h5 className="card-title">{match.language}</h5>
-          <p className="card-text">Hello, {match.hello}</p>
+          <h3 className="card-title text-7xl">Language(s) spoken: {match.language}</h3>
+          <p className="card-text flex justify-center text-6xl">Hello: {match.hello}</p>
         </div>
       </div>
     ))}
