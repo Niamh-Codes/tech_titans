@@ -1,16 +1,17 @@
-import React from "react";
 import "./AnswerCard.css";
+import CountryData from "./ConvenienceVars";
+import React, { useState } from 'react';
 
-
-    function AnswerCard({ countryCapital, countryPopulation, countryArea, countryName }) {
+function AnswerCard({ countryCapital, countryPopulation, countryArea, countryName }) {
         return (
             <>
+            <CountryData />
                 <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">
                             <p id="captialData">Capital of {countryName}</p>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back text-black">
                             <p id="capitalInformation">{countryCapital}</p>
                         </div>
                     </div>
