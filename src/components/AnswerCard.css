@@ -1,12 +1,12 @@
 
 .flip-card {
     background-color: transparent;
-    width: 190px;
+    width: 30%;
     height: 254px;
     perspective: 1000px;
     font-family: sans-serif;
   }
-  
+/*   
   .title {
     font-size: 1.5em;
     font-weight: 900;
@@ -52,6 +52,6 @@
     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
     color: #FFB53A;
     transform: rotateY(180deg);
-  }
+  } */
 
   
