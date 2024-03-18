@@ -1,11 +1,11 @@
+import React from "react";
 import "./AnswerCard.css";
-import CountryData from "./ConvenienceVars";
-import React, { useState } from 'react';
+import CountryData from "./CountryData";
+
 
 function AnswerCard({ countryCapital, countryPopulation, countryArea, countryName }) {
         return (
             <>
-            <CountryData />
                 <div className="flip-card">
                     <div className="flip-card-inner">
                         <div className="flip-card-front">

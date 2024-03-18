@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AnswerCard from './AnswerCard';
+// import AnswerCard from './AnswerCard';
 
 const CountryData = () => {
     let getCountryData = (countryName) => {

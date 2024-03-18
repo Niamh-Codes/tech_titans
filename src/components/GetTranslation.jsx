@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import helloArray from './helloArray';
+import AnswerCard from './AnswerCard';
 
-const CountryData1 = () => {
+
+const GetTranslation = () => {
     const [matchedLanguages, setMatchedLanguages] = useState([]);
+    const [countryData, setCountryData] = useState();
 
     const getCountryData = (countryName) => {
         const url = `https://restcountries.com/v3.1/name/${countryName}`;
@@ -16,6 +19,7 @@ const CountryData1 = () => {
                 }
             })
             .then(data => {
+              console.log(data);
                 const countryData1 = {
                     Name: data[0].name.common,
                     Capital: data[0].capital[0],
@@ -27,8 +31,9 @@ const CountryData1 = () => {
 
                 const languages = countryData1.Languages.split(', ');
 
-
+console.log("countryData1", countryData);
       
+test (countryData1);
         
 
                 const matchedLanguages = helloArray.filter(item => languages.includes(item.language));
@@ -38,6 +43,11 @@ const CountryData1 = () => {
                 console.error(`Error occurred: ${error.message}`);
             });
     };
+function test (data) { 
+  setCountryData(data);
+  console.log(data);
+};
+
 
 return (
 <div id="searchrow" className="text-customOrange bg-body flex flex-col items-center justify-center">
@@ -59,9 +69,12 @@ return (
       </div>
     ))}
     
+{/* <AnswerCard 
+countryCapital={countryData.Capital}/>
+{console.log("countryData", countryData)} */}
   </div>
 </div>
 );
       }
 
-export default CountryData1; // Export the CountryData1 component
+export default GetTranslation; 
