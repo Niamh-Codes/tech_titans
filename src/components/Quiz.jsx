@@ -33,6 +33,15 @@ function Quiz() {
     };
     fetchQuestions();
   }, []);
+  const handleAnswer = (answer) => {
+    if (answer === questions[currentQuestion].correct_answer) {
+      setScore(score + 1);
+      setShowAnswer(false);
+    } else {
+      setShowAnswer(true);
+    }
+    setShowNext(true);
+  };
 
   return (
     <>
