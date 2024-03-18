@@ -5,15 +5,15 @@
     height: 254px;
     perspective: 1000px;
     font-family: sans-serif;
-
   }
 
   .title {
-    font-size: 1.5em;
-    font-weight: 900;
+    font-size: 10px;
+    font-weight: 400;
     text-align: center;
     margin: 0;
   } 
+
   
   .flip-card-inner {
     /* position: relative; */
@@ -44,6 +44,7 @@
   }
   
   .flip-card-front {
+
     /* background: linear-gradient(120deg, #FFB53A 60%, rgb(255, 231, 222) 88%,
        rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
     color: #1B1914; */
@@ -56,5 +57,6 @@
     background-color: rgb(228 206 119);
     transform: rotateY(180deg);
   } 
+
 
   
