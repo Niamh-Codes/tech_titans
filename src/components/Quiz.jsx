@@ -42,6 +42,16 @@ function Quiz() {
     }
     setShowNext(true);
   };
+  const nextQuestion = () => {
+    const nextQuestionIndex = currentQuestion + 1;
+    setCurrentQuestion(nextQuestionIndex);
+    setShowNext(false);
+    setShowAnswer(false);
+    if (score > highScore) {
+      setHighScore(score);
+      localStorage.setItem('highScore', score);
+    }
+  };
 
   return (
     <>
