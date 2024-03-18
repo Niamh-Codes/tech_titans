@@ -1,6 +1,6 @@
 // insert the import modules here
-import Navbar from "./components/navbar";
-// import { motion } from 'framer-motion'; 
+import React from "react";
+// import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import MainSearch from "./components/MainSearch";
 import Footer from "./components/Footer";
@@ -13,7 +13,7 @@ import "./index.css";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Header />
       <MainSearch />
       <Divider />
