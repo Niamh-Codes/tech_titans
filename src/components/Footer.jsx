@@ -1,5 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion"
 import Users from "../../assets/users.json";
+
 
 function Footer() {
   return (
@@ -29,10 +31,12 @@ export const FooterUserCard = ({ imgSrc, name }) => {
   return (
     <div className="text-customOrange bg-body mb-4 lg:mb-0">
       <div className="mb-6 flex justify-center">
-        <img
+      <motion.img
           src={imgSrc}
-          className="w-32 rounded-full shadow-lg dark:shadow-black/30"
+          className="w-32 rounded-full shadow-lg dark:shadow-black/30 footer-img"
           alt={name}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         />
       </div>
       <h5 className="mb-4 text-xl font-semibold text-center">{name}</h5>
