@@ -59,25 +59,53 @@ function Quiz() {
     setShowNext(false);
   };
 
-
   return (
     <>
-      <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
-        <a href="#!"></a>
-        <h1 className="text-3xl lg:text-5xl font-bold text-center">Quizio</h1>
-        <div className="p-6 text-surface dark:text-white">
-          <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">Question here</h2>
-        </div>
-      </div>
-
-      <div className="container mx-auto mt-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
-          <QuizCards />
-          <QuizCards />
-          <QuizCards />
-          <QuizCards />
-        </div>
-      </div>
+      {questions.length > 0 ? (
+        currentQuestion < questions.length ? (
+          <div>
+            <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
+              <h1 className="text-3xl lg:text-5xl font-bold text-center">Quizio</h1>
+              <div className="p-6 text-surface dark:text-white">
+                <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">{questions[currentQuestion].question}</h2>
+              </div>
+            </div>
+    
+            <div className="container mx-auto mt-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+                {questions[currentQuestion].incorrect_answers.map((answer, index) => (
+                  <QuizCards key={index} onClick={() => handleAnswer(answer)} answer={answer} />
+                ))}
+              </div>
+            </div>
+            {showAnswer && (
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">Correct answer: {questions[currentQuestion].correct_answer}</h2>
+              </div>
+            )}
+            <br/>
+            {showNext && (
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button className="quizButton" style={{color: 'white'}} onClick={nextQuestion}>Next Question</button>
+              </div>
+            )}
+            <div style={{ backgroundColor: '#1B1914', color: '#FFB53A', }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
+              <div style={{ display: 'flex', justifyContent: 'center',gap: '7rem' }}>
+                <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">Score: {score}</h2>
+                <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">High Score: {highScore}</h2>
+                <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">Question: {currentQuestion + 1} / 10</h2>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">Game Over</h2>
+            <button className="quizButton" style={{color: 'white'}} onClick={restartGame}>Play Again</button>
+          </div>
+        )
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
   );
 }
