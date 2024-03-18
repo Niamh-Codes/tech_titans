@@ -1,6 +1,13 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+/* styles.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* Other custom styles */
+
 
 :root {
   font-family: 'Darker Grotesque', sans-serif;
@@ -33,15 +40,21 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
-  width: 100vw;
+  width: auto;
 }
 
 h1 {
+  font-weight: 400;
   font-size: 200px;
-  line-height: 2.1;
+  line-height: 3;;
 }
 
-/* button {
+p {
+  font-size: 50px;
+  line-height: normal;
+}
+
+button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -51,7 +64,7 @@ h1 {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-} */
+}
 
 button:hover {
   border-color: #646cff;

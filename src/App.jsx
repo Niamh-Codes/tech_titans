@@ -1,12 +1,12 @@
 // insert the import modules here
 import Header from "./components/Header";
-import Navbar from "./components/navbar";
+import {Navbar} from "./components/navbar";
 import MainSearch from "./components/MainSearch";
 import Footer from "./components/Footer";
-import Quiz from "./components/Quiz"; 
-import AnswerCard from "./components/AnswerCard";
+import Quiz from "./components/Quiz";
+import AnswerSection from "./components/AnswerSection";
 
-import "./index.css"
+import "./index.css";
 
 function App() {
   return (
@@ -15,11 +15,9 @@ function App() {
       <Header />
       <MainSearch />
       <Quiz />
-      <AnswerCard />
-      <AnswerCard />
-      <AnswerCard />
+      <AnswerSection />
       <Footer />
-          </>
+    </>
   );
 }
 

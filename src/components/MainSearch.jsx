@@ -1,9 +1,12 @@
 import React from "react";
+import "./MainSearch.css"
+
 
  function MainSearch () {
     return (
       <>
-        <nav
+
+        <nav id="search-div"
   className="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4">
   <div className="ms-5 flex w-[30%] items-center justify-between">
     <input
@@ -13,9 +16,9 @@ import React from "react";
       aria-label="Search"
       aria-describedby="button-addon2" />
 
-
+<button>
     <span
-      className="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 dark:text-white [&>svg]:w-5"
+      className="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 dark:text-white [&>svg]:w-5 "
       id="basic-addon2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,10 +30,11 @@ import React from "react";
           clipRule="evenodd" />
       </svg>
     </span>
+    </button>
   </div>
 </nav>
       </>
     )
-  }
+  };
 
-  export default MainSearch;
+export default MainSearch;
