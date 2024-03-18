@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Header() {
   return (
-    <div className="p-6 bg-body flex flex-col">
+    <div className=" 100-vh mx p-6 bg-body flex flex-col">
       <div>
         <motion.h1
           initial={{ opacity: 0, y: -200 }}
