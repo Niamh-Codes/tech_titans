@@ -6,19 +6,19 @@ import Users from "../../assets/users.json";
 function Footer() {
   return (
     <>
-      <footer style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 h-82">
+      <footer className="text-customOrange bg-body h-82">
         <div className="pt-14 pl-14">
           <div className="pb-8">
             <h2>HelloCurio is designed by</h2>
           </div>
         </div>
         <div>
-          <div className="flex flex-col lg:flex-row lg:flex-wrap gap-4 justify-evenly items-center">
+          <div className="text-customOrange bg-body flex flex-col lg:flex-row lg:flex-wrap gap-4 justify-evenly items-center">
             {Users.map((user) => (
               <FooterUserCard imgSrc={user.imgSrc} name={user.name} key={user.id} />
             ))}
           </div>
-          <div className="flex justify-center py-6">
+          <div className="text-customOrange bg-body flex justify-center py-6">
             <h2>2024</h2>
           </div>
         </div>
@@ -29,7 +29,7 @@ function Footer() {
 
 export const FooterUserCard = ({ imgSrc, name }) => {
   return (
-    <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="mb-4 lg:mb-0">
+    <div className="text-customOrange bg-body mb-4 lg:mb-0">
       <div className="mb-6 flex justify-center">
       <motion.img
           src={imgSrc}

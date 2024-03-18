@@ -3,6 +3,7 @@ import axios from "axios";
 import QuizCards from "./QuizCards";
 
 function Quiz() {
+  // State variables
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -10,31 +11,35 @@ function Quiz() {
   const [showNext, setShowNext] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
   const [answerSubmitted, setAnswerSubmitted] = useState(false); 
+  const [quizCategory, setQuizCategory] = useState(22); // Initial category
 
+  // Function to fetch questions from API
+  const fetchQuestions = async () => {
+    const response = await axios.get(`https://opentdb.com/api.php?amount=10&category=${quizCategory}&difficulty=easy&type=multiple&encode=url3986`);
+    const decodedQuestions = response.data.results.map(question => {
+      const incorrect_answers = question.incorrect_answers.map(answer => decodeURIComponent(answer));
+      const correct_answer = decodeURIComponent(question.correct_answer);
+      const answers = [...incorrect_answers, correct_answer];
+      for (let i = answers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [answers[i], answers[j]] = [answers[j], answers[i]];
+      }
+      return {
+        ...question,
+        question: decodeURIComponent(question.question),
+        correct_answer,
+        incorrect_answers: answers,
+      };
+    });
+    setQuestions(decodedQuestions);
+  };
+
+  // UseEffect to fetch questions when quizCategory changes
   useEffect(() => {
-    const fetchQuestions = async () => {
-      const response = await axios.get("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple&encode=url3986");
-      const decodedQuestions = response.data.results.map(question => {
-        const incorrect_answers = question.incorrect_answers.map(answer => decodeURIComponent(answer));
-        const correct_answer = decodeURIComponent(question.correct_answer);
-        const answers = [...incorrect_answers, correct_answer];
-        // Shuffle the answers
-        for (let i = answers.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [answers[i], answers[j]] = [answers[j], answers[i]];
-        }
-        return {
-          ...question,
-          question: decodeURIComponent(question.question),
-          correct_answer,
-          incorrect_answers: answers,
-        };
-      });
-      setQuestions(decodedQuestions);
-    };
     fetchQuestions();
-  }, []);
+  }, [quizCategory]); 
   
+  // Function to handle answer submission
   const handleAnswer = (answer) => {
     if (!answerSubmitted) {
       if (answer === questions[currentQuestion].correct_answer) {
@@ -48,6 +53,7 @@ function Quiz() {
     }
   };
 
+  // Function to move to next question
   const nextQuestion = () => {
     const nextQuestionIndex = currentQuestion + 1;
     setCurrentQuestion(nextQuestionIndex);
@@ -60,13 +66,16 @@ function Quiz() {
     }
   };
   
+  // Function to restart the game
   const restartGame = () => {
     setCurrentQuestion(0);
     setScore(0);
     setShowAnswer(false);
     setShowNext(false);
+    setQuizCategory(quizCategory === 22 ? 23 : 22); // Change category when restarting the game
   };
 
+  // Render the Quiz component
   return (
     <>
       {questions.length > 0 ? (
@@ -94,7 +103,8 @@ function Quiz() {
             <br/>
             {showNext && (
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <button className="quizButton" style={{color: 'white'}} onClick={nextQuestion}>Next Question</button>
+                <button className="quizButton" style={{color: 'white', fontSize:'24px', padding: '2px 8px',}} onClick={nextQuestion}>Next Question</button>
+
               </div>
             )}
             <div style={{ backgroundColor: '#1B1914', color: '#FFB53A', }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">

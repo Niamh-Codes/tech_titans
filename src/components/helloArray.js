@@ -422,3 +422,5 @@
             "hello": "Sawubona"
           }
         ]
+
+        export default helloArray;
