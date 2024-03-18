@@ -9,6 +9,7 @@ function Quiz() {
   const [highScore, setHighScore] = useState(localStorage.getItem('highScore') || 0);
   const [showNext, setShowNext] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [answerSubmitted, setAnswerSubmitted] = useState(false); 
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -33,25 +34,32 @@ function Quiz() {
     };
     fetchQuestions();
   }, []);
+  
   const handleAnswer = (answer) => {
-    if (answer === questions[currentQuestion].correct_answer) {
-      setScore(score + 1);
-      setShowAnswer(false);
-    } else {
-      setShowAnswer(true);
+    if (!answerSubmitted) {
+      if (answer === questions[currentQuestion].correct_answer) {
+        setScore(score + 1);
+        setShowAnswer(false);
+      } else {
+        setShowAnswer(true);
+      }
+      setShowNext(true);
+      setAnswerSubmitted(true);
     }
-    setShowNext(true);
   };
+
   const nextQuestion = () => {
     const nextQuestionIndex = currentQuestion + 1;
     setCurrentQuestion(nextQuestionIndex);
     setShowNext(false);
     setShowAnswer(false);
+    setAnswerSubmitted(false);
     if (score > highScore) {
       setHighScore(score);
       localStorage.setItem('highScore', score);
     }
   };
+  
   const restartGame = () => {
     setCurrentQuestion(0);
     setScore(0);
@@ -74,7 +82,7 @@ function Quiz() {
             <div className="container mx-auto mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
                 {questions[currentQuestion].incorrect_answers.map((answer, index) => (
-                  <QuizCards key={index} onClick={() => handleAnswer(answer)} answer={answer} />
+                  <QuizCards key={index} onClick={() => handleAnswer(answer)} answer={answer} disabled={answerSubmitted} />
                 ))}
               </div>
             </div>
@@ -111,5 +119,3 @@ function Quiz() {
 }
 
 export default Quiz;
-
-
