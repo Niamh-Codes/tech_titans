@@ -9,6 +9,31 @@ function Quiz() {
   const [highScore, setHighScore] = useState(localStorage.getItem('highScore') || 0);
   const [showNext, setShowNext] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
+
+  useEffect(() => {
+    const fetchQuestions = async () => {
+      const response = await axios.get("https://opentdb.com/api.php?amount=10&category=22&difficulty=easy&type=multiple&encode=url3986");
+      const decodedQuestions = response.data.results.map(question => {
+        const incorrect_answers = question.incorrect_answers.map(answer => decodeURIComponent(answer));
+        const correct_answer = decodeURIComponent(question.correct_answer);
+        const answers = [...incorrect_answers, correct_answer];
+        // Shuffle the answers
+        for (let i = answers.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [answers[i], answers[j]] = [answers[j], answers[i]];
+        }
+        return {
+          ...question,
+          question: decodeURIComponent(question.question),
+          correct_answer,
+          incorrect_answers: answers,
+        };
+      });
+      setQuestions(decodedQuestions);
+    };
+    fetchQuestions();
+  }, []);
+
   return (
     <>
       <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
