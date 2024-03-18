@@ -52,6 +52,13 @@ function Quiz() {
       localStorage.setItem('highScore', score);
     }
   };
+  const restartGame = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+    setShowAnswer(false);
+    setShowNext(false);
+  };
+
 
   return (
     <>
