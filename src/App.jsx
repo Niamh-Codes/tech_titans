@@ -1,6 +1,6 @@
 // insert the import modules here
-import Navbar from "./components/Navbar";
-import { motion } from 'framer-motion'; 
+import Navbar from "./components/navbar";
+// import { motion } from 'framer-motion'; 
 import Header from "./components/Header";
 import MainSearch from "./components/MainSearch";
 import Footer from "./components/Footer";
