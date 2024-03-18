@@ -3,6 +3,12 @@ import axios from "axios";
 import QuizCards from "./QuizCards";
 
 function Quiz() {
+  const [questions, setQuestions] = useState([]);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(localStorage.getItem('highScore') || 0);
+  const [showNext, setShowNext] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
   return (
     <>
       <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
@@ -26,3 +32,5 @@ function Quiz() {
 }
 
 export default Quiz;
+
+
