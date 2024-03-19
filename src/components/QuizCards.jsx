@@ -1,18 +1,5 @@
 import React, { useState } from "react";
 
-<<<<<<< HEAD
-function QuizCards() {
-    return (
-        <>
-      <button
-        type="button" 
-        className="inline-block mx-auto bg-customOrange justify-center rounded text-sm font-medium uppercase leading-normal text-black">
-        AnswerOptions
-      </button>
-</>
-    );
-}
-=======
 function QuizCards({ onClick, answer }) {
   const [selected, setSelected] = useState(false);
 
@@ -20,7 +7,6 @@ function QuizCards({ onClick, answer }) {
     onClick();
     setSelected(true);
   };
->>>>>>> 2d5a495c44a99a9712bc0ce8b857039e0232d7bf
 
   const resetColor = () => {
     setSelected(false);
