@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function MainSearch() {
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-body">
+    <div className="h-screen flex flex-col justify-center items-center">
       <div className="container mx-auto p-11 flex flex-col items-center lg:items-start">
         <motion.h1
           initial={{ opacity: 0, y: -200 }}
