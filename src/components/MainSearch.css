@@ -1,17 +1,29 @@
 #search-div {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-search {
-    height: 10vh;
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; 
     margin: 0;
     border: 1px solid #ccc;
     border-radius: 50px;
-    padding: 5px;
-    font-size: 30px;
+    padding: 15px; /* Increase padding for better spacing */
+    font-size: 1.5rem; /* Use relative units for font size */
 }
 
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+    #search-div {
+        padding-top: 50px; /* Adjust padding-top to ensure content is centered vertically */
+    }
+
+    .main-search {
+        width: 90%; /* Adjust width for smaller screens */
+        font-size: 1.2rem; 
+    }
+}

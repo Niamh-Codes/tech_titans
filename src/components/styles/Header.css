@@ -1,3 +1,73 @@
-.header {
-    height: 100vh;
+.header-container {
+  height: 100vh;
+  margin: 0;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  margin-bottom: 2px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  color: #f18c1d; /* customOrange color */
+}
+
+.star-orange {
+  width: 200px;
+  height: 200px;
+  background: url('../../assets/starOrange.svg');
+  background-size: cover;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  z-index: -1;
+}
+
+.subtitle {
+  width: 100%; /* Change width to 100% */
+  padding: 6px;
+  margin-bottom: 5px;
+  font-size: 7xl;
+  color: white;
+}
+
+.separator {
+  width: 40%;
+  padding-left: 2px;
+}
+
+.header-description {
+  width: 100%; /* Change width to 100% */
+  padding-right: 2px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.description-text {
+  margin-bottom: 3px;
+  color: white;
+  font-size: 1.5rem; /* text-lg */
+}
+
+.line {
+  height: 0.5px;
+  background-color: rgb(255, 255, 255); /* neutral-100 dark */
+  margin-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 2xl; /* text-2xl */
+    margin-bottom: 20px; /* Increase margin for better separation */
   }
+
+  .header-description {
+    margin-bottom: 20px; /* Increase margin for better separation */
+  }
+
+  .description-text {
+    font-size: 1.5rem; /* text-lg */
+  }
+}
