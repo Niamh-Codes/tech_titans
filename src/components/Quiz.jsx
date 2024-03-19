@@ -81,11 +81,8 @@ function Quiz() {
       {questions.length > 0 ? (
         currentQuestion < questions.length ? (
           <div>
-            <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
-              <h1 className="text-3xl lg:text-5xl text-left">Quizio</h1>
-              <div className="justify-start content-end mb-3 text-white flex flex-col text-lg lg:text-2xl">
-              Test your knowledge with a thrilling exploration of random country facts. Delve into the diverse tapestry of nations as you challenge yourself to recall fascinating tidbits about their geography, culture, history, and more. 
-              </div>
+            <div id="quiz" style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
+              <h1 className="text-3xl lg:text-5xl font-bold text-center">Quizio</h1>
               <div className="p-6 text-surface dark:text-white">
                 <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">{questions[currentQuestion].question}</h2>
               </div>
