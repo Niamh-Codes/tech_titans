@@ -1,9 +1,11 @@
-import React from "react";
+import { useState } from 'react';
 import AnswerCard from "./AnswerCard";
 import GetTranslation from "./GetTranslation";
 import { motion } from "framer-motion";
 
 function MainSearch() {
+  const [countryData, setCountryData] = useState();
+
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-body">
       <div className="container mx-auto p-11 flex flex-col items-center lg:items-start">
@@ -16,9 +18,14 @@ function MainSearch() {
           Search your location here.
         </motion.h1>
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-11 justify-center w-full">
-          <GetTranslation className="mb-10 lg:mb-4" />
+          <GetTranslation className="mb-10 lg:mb-4" setMainCountryData={setCountryData} />
           <div className="answer-section flex justify-center space-x-5">
-            <AnswerCard />
+                {countryData && <AnswerCard 
+                countryCapital={countryData.Capital}
+                countryPopulation={countryData.Population}
+                countryArea={countryData.Area}
+                countryName={countryData.Name}
+                          />}
           </div>
         </div>
       </div>
