@@ -14,7 +14,9 @@ function Navbar() {
     </div>
     <div className="hidden lg:flex w-full lg:w-1/3 items-center justify-end mr-8">
       <ul className="flex gap-4">
-        <a href="#footer">Contact</a>
+        <a href="#search">Search</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#footer">Meet the Team</a>
       </ul>
     </div>
   </div>
