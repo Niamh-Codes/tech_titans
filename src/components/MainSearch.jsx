@@ -1,36 +1,73 @@
-import React from "react";
+import React,{useState} from "react";
+import AnswerCard from "./AnswerCard";
+import GetTranslation from "./GetTranslation";
+import { motion } from "framer-motion";
+import helloArray from "./helloArray"
 
- function MainSearch () {
-    return (
-      <>
-        <nav
-  className="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4">
-  <div className="ms-5 flex w-[30%] items-center justify-between">
-    <input
-      type="search"
-      className="main-search relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:bg-body-dark dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill"
-      placeholder="Search"
-      aria-label="Search"
-      aria-describedby="button-addon2" />
+function MainSearch() {
+  const [ countryData, setCountryData] = useState({Name: "",
+    Capital: "",
+    Population: "",
+    Area: "",
+    Region: "",
+    Languages: ""})
+  const [matchedLanguages, setMatchedLanguages] = useState([]);
+  const getCountryData = (countryName) => {
+    const url = `https://restcountries.com/v3.1/name/${countryName}`;
 
+    fetch(url)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error(`Failed to fetch country data: ${response.status}`);
+            }
+        })
+        .then(data => {
+          console.log(data);
+            const countryData1 = {
+                Name: data[0].name.common,
+                Capital: data[0].capital[0],
+                Population: data[0].population,
+                Area: data[0].area,
+                Region: data[0].region,
+                Languages: Object.values(data[0].languages).join(', ')
+            };
+setCountryData(countryData1)
+            const languages = countryData1.Languages.split(', ');
+console.log(languages);
+  
+// test (countryData1);
+    
 
-    <span
-      className="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 dark:text-white [&>svg]:w-5"
-      id="basic-addon2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor">
-        <path
-          fillRule="evenodd"
-          d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-          clipRule="evenodd" />
-      </svg>
-    </span>
-  </div>
-</nav>
-      </>
-    )
-  }
+            const matchedLanguages = helloArray.filter(item => languages.includes(item.language));
+            console.log(matchedLanguages);
+            setMatchedLanguages(matchedLanguages);
+        })
+        .catch(error => {
+            console.error(`Error occurred: ${error.message}`);
+        });
+};
+  return (
+    <div className="h-screen flex flex-col justify-center items-center bg-body">
+      <div className="container mx-auto p-11 flex flex-col items-center lg:items-start">
+        <motion.h1
+          initial={{ opacity: 0, y: -200 }}
+          animate={{ opacity: 1, y: -100 }}
+          transition={{ duration: 1 }}
+          className="text-white text-left mb-8 lg:mb-10 gap-9 text-7xl "
+        >
+          Search your location here.
+        </motion.h1>
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-11 justify-center w-full">
+          <GetTranslation className="mb-10 lg:mb-4" getCountryData={getCountryData} countryData={countryData} matchedLanguages={matchedLanguages}/>
+          <div className="answer-section flex justify-center space-x-5">
+            <AnswerCard countryData={countryData}/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-  export default MainSearch;
+export default MainSearch;
