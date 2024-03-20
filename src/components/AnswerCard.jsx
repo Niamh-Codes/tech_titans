@@ -1,6 +1,6 @@
 import React from "react";
 import "./AnswerCard.css";
-import CountryData from "./CountryData";
+// import CountryData from "./CountryData";
 
 
 function AnswerCard({ countryCapital, countryPopulation, countryArea, countryName }) {
@@ -22,7 +22,7 @@ function AnswerCard({ countryCapital, countryPopulation, countryArea, countryNam
                         <div className="flip-card-front">
                             <p id="populationData">Population of {countryName}</p>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back text-black">
                             <p id="PopulationInformation">{countryPopulation}</p>
                         </div>
                     </div>
@@ -30,10 +30,10 @@ function AnswerCard({ countryCapital, countryPopulation, countryArea, countryNam
     
                 <div className="flip-card">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front">
+                        <div className="flip-card-front ">
                             <p id="areaData">Area of {countryName}</p>
                         </div>
-                        <div className="flip-card-back">
+                        <div className="flip-card-back text-black">
                             <p id="areaInformation">{countryArea}</p>
                         </div>
                     </div>
