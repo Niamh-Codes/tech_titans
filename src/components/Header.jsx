@@ -5,7 +5,7 @@ import './styles/Header.css'; // Import the CSS file
 
 function Header() {
   return (
-    <div className="header-container">
+    <div className="header-container h-screen">
       <div className="flex items-center justify-between"> {/* Added flex container with justify-between */}
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -26,7 +26,7 @@ function Header() {
           transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
         />
       </div>
-      <div className="flex lg:flex-row mb-6">
+      <div className="flex lg:flex-row">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
