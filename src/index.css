@@ -43,16 +43,16 @@ body {
   width: auto;
 }
 
-h1 {
+/* h1 {
   font-weight: 400;
   font-size: 200px;
   line-height: 2;;
-}
+} */
 
-p {
+/* p {
   font-size: 50px;
   line-height: normal;
-}
+} */
 
 button {
   border-radius: 8px;
