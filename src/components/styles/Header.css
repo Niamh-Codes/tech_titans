@@ -1,17 +1,13 @@
-.header-container {
+header{
   height: 100vh;
-  margin: 0;
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
 }
 
-.header-title {
-  margin-bottom: 2px;
-  padding: 6px;
+.header-container {
+  height: 100vh;
+  padding: 60px;
   display: flex;
   flex-direction: column;
-  color: #f18c1d; /* customOrange color */
+  margin-bottom: 60px;
 }
 
 .star-orange {
@@ -19,55 +15,34 @@
   height: 200px;
   background: url('../../assets/starOrange.svg');
   background-size: cover;
-  position: absolute;
-  top: 20px;
-  right: 100px;
   z-index: -1;
+  right: 200;
+  top:200;
 }
 
 .subtitle {
-  width: 100%; /* Change width to 100% */
-  padding: 6px;
-  margin-bottom: 5px;
-  font-size: 7xl;
+  font-size: 80px;
+  width: 100%;
+  margin-top: 250px;
+  margin-bottom: 80px;
   color: white;
 }
 
-.separator {
-  width: 40%;
-  padding-left: 2px;
-}
-
-.header-description {
-  width: 100%; /* Change width to 100% */
-  padding-right: 2px;
+.header-title {
+  font-size: 200px;
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .description-text {
-  margin-bottom: 3px;
   color: white;
-  font-size: 1.5rem; /* text-lg */
+  font-size: 1.5rem;
 }
 
 .line {
-  height: 0.5px;
-  background-color: rgb(255, 255, 255); /* neutral-100 dark */
+  height: 0.75px;
+  background-color: white;
   margin-bottom: 3px;
 }
 
-@media (max-width: 768px) {
-  .subtitle {
-    font-size: 2xl; /* text-2xl */
-    margin-bottom: 20px; /* Increase margin for better separation */
-  }
-
-  .header-description {
-    margin-bottom: 20px; /* Increase margin for better separation */
-  }
-
-  .description-text {
-    font-size: 1.5rem; /* text-lg */
-  }
-}
