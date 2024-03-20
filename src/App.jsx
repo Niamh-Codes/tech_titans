@@ -1,4 +1,8 @@
 import React from "react";
+
+// import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
+
 import Header from "./components/Header";
 import MainSearch from "./components/MainSearch";
 import Footer from "./components/Footer";
@@ -9,6 +13,9 @@ import "./index.css";
 function App() {
   return (
     <>
+
+      <Nav />
+
       <Header />
       <MainSearch />
       <Divider />
