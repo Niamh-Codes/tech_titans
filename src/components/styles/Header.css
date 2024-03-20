@@ -1,3 +1,42 @@
-.header {
-    height: 100vh;
-  }
+.header-container {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.star-orange {
+  width: 200px;
+  height: 200px;
+  background: url('../../assets/starOrange.svg');
+  background-size: cover;
+  z-index: -1;
+  right: 200;
+  top:200;
+}
+
+.subtitle {
+  max-height: fit-content;
+  font-size: 80px;
+  width: 100%;
+  color: white;
+}
+
+.header-title {
+  font-size: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.description-text {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.line {
+  height: 0.75px;
+  background-color: white;
+  margin-bottom: 3px;
+}
+
