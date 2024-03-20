@@ -2,37 +2,37 @@
     {
         "id": 1,
         "name": "Niamh Alexander",
-        "imgSrc": "./assets/niamh.png",
+        "imgSrc": "../images/niamh.png",
         "githubLink": "https://github.com/Niamh-Codes"
     },
     {
         "id": 2,
         "name": "Krystle Murphy",
-        "imgSrc": "./assets/krystle.png",
+        "imgSrc": "../images/krystle.png",
         "githubLink": "https://github.com/KrystleMurphy"
     },
     {
         "id": 3,
         "name": "Prince Nkosinathi",
-        "imgSrc": "./assets/prince.png",
+        "imgSrc": "../images/prince.png",
         "githubLink": "https://github.com/HIYASHE06"
     },
     {
         "id": 4,
         "name": "Yaseen Fehad",
-        "imgSrc": "./assets/yaseen.png",
+        "imgSrc": "../images/yaseen.png",
         "githubLink": "https://github.com/yasfeh12"
     },
     {
         "id": 5,
         "name": "Darrol Martin",
-        "imgSrc": "./assets/darrol.png",
+        "imgSrc": "../images/darrol.png",
         "githubLink": "https://github.com/DarrolMartin"
     },
     {
         "id": 6,
         "name": "Isabel Toledano",
-        "imgSrc": "./assets/isabel.png",
+        "imgSrc": "../images/isabel.png",
         "githubLink": "https://github.com/eesahbella"
     }
 ]
