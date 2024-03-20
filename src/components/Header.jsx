@@ -19,6 +19,8 @@ function Header() {
           className="star-orange"
           style={{
             background: `url(${starOrange})`,
+            width: '200px', // Adjust width to match your SVG width
+            height: '200px', // Adjust height to match your SVG height
           }}
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
