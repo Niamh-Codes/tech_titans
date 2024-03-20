@@ -1,45 +1,43 @@
 import React from "react";
 import "./AnswerCard.css";
-import CountryData from "./CountryData";
 
+function AnswerCard(props) {
+    return (
+        <>
+            <div className="flip-card">
+                <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                        <p id="capitalData">Capital of {props.countryData.Name }</p>
+                    </div>
+                    <div className="flip-card-back text-black">
+                        <p id="capitalInformation">{props.countryData.Capital}</p>
+                    </div>
+                </div>
+            </div>
 
-function AnswerCard({ countryCapital, countryPopulation, countryArea, countryName }) {
-        return (
-            <>
-                <div className="flip-card">
-                    <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <p id="captialData">Capital of {countryName}</p>
-                        </div>
-                        <div className="flip-card-back text-black">
-                            <p id="capitalInformation">{countryCapital}</p>
-                        </div>
+            <div className="flip-card">
+                <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                        <p id="populationData">Population of {props.countryData.Name}</p>
+                    </div>
+                    <div className="flip-card-back text-black">
+                        <p id="PopulationInformation">{props.countryData.Population}</p>
                     </div>
                 </div>
-    
-                <div className="flip-card">
-                    <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <p id="populationData">Population of {countryName}</p>
-                        </div>
-                        <div className="flip-card-back">
-                            <p id="PopulationInformation">{countryPopulation}</p>
-                        </div>
+            </div>
+
+            <div className="flip-card">
+                <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                        <p id="areaData">Area of {props.countryData.Name}</p>
+                    </div>
+                    <div className="flip-card-back text-black">
+                        <p id="areaInformation">{props.countryData.Region}</p>
                     </div>
                 </div>
-    
-                <div className="flip-card">
-                    <div className="flip-card-inner">
-                        <div className="flip-card-front">
-                            <p id="areaData">Area of {countryName}</p>
-                        </div>
-                        <div className="flip-card-back">
-                            <p id="areaInformation">{countryArea}</p>
-                        </div>
-                    </div>
-                </div>
-            </>
-        );
-    }
+            </div> 
+        </>
+    );
+}
 
 export default AnswerCard;
