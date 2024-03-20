@@ -48,17 +48,10 @@ const GetTranslation = (props) => {
 // };
 
 
-<<<<<<< HEAD
-    return (
-        <div id="searchrow" className="text-customOrange bg-body flex flex-col items-center justify-center">
-            <div className=" flex items-center justify-center">
-                <input className="mt-10 h-12 w-64 rounded-l-lg border-r-0 pl-4 text-black text-2xl" type="text" id="main-search" placeholder="Type your country here..." onKeyPress={(event) => {
-=======
 return (
 <div id="searchrow" className="text-customOrange bg-body flex flex-col items-center justify-center">
   <div className=" flex items-center justify-center"> {/* Change flex-col to flex */}
     <input className="mt-10 h-12 w-64 rounded-l-lg border-r-0 pl-4 text-black text-2xl" type="text" id="main-search" placeholder="Type your country here..." onKeyPress={(event) => {
->>>>>>> Yaseens-branch
                     if (event.key === 'Enter') {
                         props.getCountryData(document.querySelector('#main-search').value);
                     }}} /> 
