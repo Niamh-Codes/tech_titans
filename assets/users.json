@@ -2,61 +2,37 @@
     {
         "id": 1,
         "name": "Niamh Alexander",
-<<<<<<< HEAD
         "imgSrc": "../images/niamh.png",
-=======
-        "imgSrc": "./assets/niamh.png",
->>>>>>> Yaseens-branch
         "githubLink": "https://github.com/Niamh-Codes"
     },
     {
         "id": 2,
         "name": "Krystle Murphy",
-<<<<<<< HEAD
         "imgSrc": "../images/krystle.png",
-=======
-        "imgSrc": "./assets/krystle.png",
->>>>>>> Yaseens-branch
         "githubLink": "https://github.com/KrystleMurphy"
     },
     {
         "id": 3,
         "name": "Prince Nkosinathi",
-<<<<<<< HEAD
         "imgSrc": "../images/prince.png",
-=======
-        "imgSrc": "./assets/prince.png",
->>>>>>> Yaseens-branch
         "githubLink": "https://github.com/HIYASHE06"
     },
     {
         "id": 4,
         "name": "Yaseen Fehad",
-<<<<<<< HEAD
         "imgSrc": "../images/yaseen.png",
-=======
-        "imgSrc": "./assets/yaseen.png",
->>>>>>> Yaseens-branch
         "githubLink": "https://github.com/yasfeh12"
     },
     {
         "id": 5,
         "name": "Darrol Martin",
-<<<<<<< HEAD
         "imgSrc": "../images/darrol.png",
-=======
-        "imgSrc": "./assets/darrol.png",
->>>>>>> Yaseens-branch
         "githubLink": "https://github.com/DarrolMartin"
     },
     {
         "id": 6,
         "name": "Isabel Toledano",
-<<<<<<< HEAD
         "imgSrc": "../images/isabel.png",
-=======
-        "imgSrc": "./assets/isabel.png",
->>>>>>> Yaseens-branch
         "githubLink": "https://github.com/eesahbella"
     }
 ]

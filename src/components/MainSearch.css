@@ -1,17 +1,12 @@
 #search-div {
     width: 100%;
-<<<<<<< HEAD
     min-height: 100vh;
-=======
-    height: 100vh;
->>>>>>> Yaseens-branch
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .main-search {
-<<<<<<< HEAD
     width: 80%; /* Adjust width as needed */
     max-width: 600px; 
     margin: 0;
@@ -32,13 +27,3 @@
         font-size: 1.2rem; 
     }
 }
-=======
-    height: 10vh;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 50px;
-    padding: 5px;
-    font-size: 30px;
-}
-
->>>>>>> Yaseens-branch

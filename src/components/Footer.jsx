@@ -6,11 +6,7 @@ import Users from "../../assets/users.json";
 function Footer() {
   return (
     <>
-<<<<<<< HEAD
       <footer id="footer" className="text-customOrange bg-body h-82">
-=======
-      <footer className="text-customOrange bg-body h-82">
->>>>>>> Yaseens-branch
         <div className="pt-14 pl-14">
           <div className="pb-8">
             <h2>HelloCurio is designed by</h2>

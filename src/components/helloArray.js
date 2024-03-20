@@ -89,14 +89,7 @@
             "language": "Dutch",
             "hello": "Hallo"
           },
-<<<<<<< HEAD
-          {
-            "language": "English",
-            "hello": "Hello"
-          },
-=======
           
->>>>>>> Yaseens-branch
           {
             "language": "Esperanto",
             "hello": "Saluton"

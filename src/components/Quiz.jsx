@@ -81,11 +81,7 @@ function Quiz() {
       {questions.length > 0 ? (
         currentQuestion < questions.length ? (
           <div>
-<<<<<<< HEAD
             <div id="quiz" style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
-=======
-            <div style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-500 block rounded-lg dark:bg-surface-dark p-4">
->>>>>>> Yaseens-branch
               <h1 className="text-3xl lg:text-5xl font-bold text-center">Quizio</h1>
               <div className="p-6 text-surface dark:text-white">
                 <h2 className="mb-4 text-xl lg:text-2xl font-medium leading-tight text-center">{questions[currentQuestion].question}</h2>
