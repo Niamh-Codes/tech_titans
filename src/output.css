@@ -66,7 +66,11 @@ html,
 */
 
 body {
+<<<<<<< HEAD
   margin:0;
+=======
+  margin: 0;
+>>>>>>> Yaseens-branch
   /* 1 */
   line-height: inherit;
   /* 2 */
@@ -835,7 +839,11 @@ button:focus-visible {
 }
 
 .bg-body {
+<<<<<<< HEAD
   background-color: #1b1914;
+=======
+  background-color: #14110a;
+>>>>>>> Yaseens-branch
 }
 
 .focus\:text-gray-700:focus {

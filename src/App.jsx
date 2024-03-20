@@ -15,7 +15,10 @@ function App() {
       <Quiz />
       <Divider />
       <Footer />
+<<<<<<< HEAD
       {/* <DotSlider /> */}
+=======
+>>>>>>> Yaseens-branch
     </>
   );
 }

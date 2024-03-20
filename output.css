@@ -640,7 +640,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+<<<<<<< HEAD
   background-color: #1b1914;
+=======
+  background-color: #1a1a1a;
+>>>>>>> Yaseens-branch
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -669,7 +673,11 @@ button:focus-visible {
   }
 }
 .bg-body {
+<<<<<<< HEAD
   background-color: #1b1914;
+=======
+  background-color: #14110a;
+>>>>>>> Yaseens-branch
 }
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
