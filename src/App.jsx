@@ -15,6 +15,7 @@ function App() {
       <Quiz />
       <Divider />
       <Footer />
+      {/* <DotSlider /> */}
     </>
   );
 }
