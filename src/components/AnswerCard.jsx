@@ -7,7 +7,7 @@ function AnswerCard(props) {
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
-                        <p id="capitalData">Capital of {props.countryData.Name }</p>
+                        <p id="capitalData lg:text-6xl md:text-5xl sm:text-4xl">Capital of {props.countryData.Name }</p>
                     </div>
                     <div className="flip-card-back text-black">
                         <p id="capitalInformation">{props.countryData.Capital}</p>

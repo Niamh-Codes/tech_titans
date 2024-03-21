@@ -17,7 +17,7 @@ function Footer() {
           ))}
         </div>
         <div className="text-customOrange bg-body flex justify-center py-6">
-          <h2>2024</h2>
+          <h2>© 2024.</h2>
         </div>
       </div>
     </footer>

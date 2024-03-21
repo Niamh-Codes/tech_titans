@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AnswerCard from "./AnswerCard";
 import GetTranslation from "./GetTranslation";
 import { motion } from "framer-motion";
-import helloArray from "./helloArray";;
+import helloArray from "./helloArray";
 import starYellow from "../../assets/starYellow.svg";
 
 function MainSearch() {
@@ -51,7 +51,7 @@ function MainSearch() {
 
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-body">
-      <div className="container flex flex-col lg:items-start">
+      <div className="container flex flex-col lg:items-start p-4">
       <motion.div
           className="star-yellow"
           style={{
@@ -80,14 +80,14 @@ function MainSearch() {
         </motion.h2>
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-11 justify-center w-full">
           <GetTranslation className="mb-10 lg:mb-4" getCountryData={getCountryData} countryData={countryData} matchedLanguages={matchedLanguages}/>
-          <div className="answer-section flex justify-center space-x-5">
-            {matchedLanguages.map((matchedLanguage, index) => (
-              <AnswerCard key={index} countryData={countryData} matchedLanguage={matchedLanguage} />
-            ))}
+            <div className="answer-section flex justify-center space-x-5">
+              {matchedLanguages.length > 0 && (
+                <AnswerCard key={countryData.Name} countryData={countryData} />
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
