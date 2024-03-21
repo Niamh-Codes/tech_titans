@@ -9,12 +9,12 @@ const NavBar = () => {
       </div>
       <ul className='flex gap-4 mr-3'>
         <li>
-          <Link to="search" spy={true} smooth={true} duration={500} className="cursor-pointer text-white hover:text-customOrange">
+          <Link to="mainsearch" spy={true} smooth={true} duration={500} className="cursor-pointer text-white hover:text-customOrange">
             Search
           </Link>
         </li>
         <li>
-          <Link to="Quiz" spy={true} smooth={true} duration={500} className="cursor-pointer text-white hover:text-customOrange">
+          <Link to="quiz" spy={true} smooth={true} duration={500} className="cursor-pointer text-white hover:text-customOrange">
             Quiz
           </Link>
         </li>
