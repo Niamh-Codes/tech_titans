@@ -15,7 +15,7 @@ function App() {
     <div id="mainsearch">
       <MainSearch />
       </div>
-      <Divider />
+      {/* <Divider /> */}
       <div id="quiz">
       <Quiz />
       </div>

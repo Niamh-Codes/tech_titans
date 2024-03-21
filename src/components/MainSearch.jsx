@@ -51,7 +51,7 @@ function MainSearch() {
 
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-body">
-      <div className="container p-8 flex flex-col lg:items-start">
+      <div className="container flex flex-col lg:items-start">
       <motion.div
           className="star-yellow"
           style={{
