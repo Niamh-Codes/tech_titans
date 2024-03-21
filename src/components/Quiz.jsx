@@ -2,7 +2,6 @@ import React,{useState, useEffect} from "react";
 import axios from "axios";
 import QuizCards from "./QuizCards";
 import { motion } from "framer-motion";
-import starOrange from "../../assets/starOrange.svg";
 
 function Quiz() {
   // State variables
@@ -83,16 +82,6 @@ function Quiz() {
       {questions.length > 0 ? (
         currentQuestion < questions.length ? (
           <div>
-                    <motion.div
-          className="star-orange"
-          style={{
-            background: `url(${starOrange})`,
-            width: '200px', // Adjust width to match your SVG width
-            height: '200px', // Adjust height to match your SVG height
-          }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-        />
             <div id="quiz" style={{ backgroundColor: '#1B1914', color: '#FFB53A' }} className="bg-gray-900 text-yellow-50 rounded-lg dark:bg-surface-dark items-center flex flex-col p-20 ">
               <h1 className="text-customOrange text-left lg:text-6xl md:text-5xl sm:text-4xl flex flex-col mb-8 ">Quizio</h1>
                 <div className=" lg:text-4xl md:text-3xl sm:text-3xl text-white mb-11">Test your knowledge with a thrilling exploration of random country facts. Delve into the diverse tapestry of nations as you challenge yourself to recall fascinating tidbits about their geography, culture, history, and more.</div>
