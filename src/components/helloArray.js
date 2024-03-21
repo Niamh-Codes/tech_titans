@@ -89,7 +89,10 @@
             "language": "Dutch",
             "hello": "Hallo"
           },
-          
+          {
+            "language": "English",
+            "hello": "Hello"
+          },
           {
             "language": "Esperanto",
             "hello": "Saluton"
