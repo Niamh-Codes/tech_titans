@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import helloArray from './helloArray';
 import AnswerCard from './AnswerCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 const GetTranslation = (props) => {
@@ -56,7 +58,7 @@ return (
                         props.getCountryData(document.querySelector('#main-search').value);
                     }}} /> 
                     
-    <button className="text-black mt-10 h-12 w-16 bg-customOrange rounded-l-none rounded-r-lg " onClick={() => props.getCountryData(document.querySelector('#main-search').value)}></button>
+    <button className="text-black mt-10 h-12 w-16 bg-customOrange rounded-l-none rounded-r-lg " onClick={() => props.getCountryData(document.querySelector('#main-search').value)}><FontAwesomeIcon icon={faSearch} /></button>
   </div>
   <div id="helloContainer" className="justify-center mt-10 mb-10 text-customOrange bg-body w-full space-y-4 flex flex-wrap"> 
     {props.matchedLanguages.map((match,index) => (
