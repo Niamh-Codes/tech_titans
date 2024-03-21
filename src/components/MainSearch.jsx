@@ -2,7 +2,8 @@ import React,{useState} from "react";
 import AnswerCard from "./AnswerCard";
 import GetTranslation from "./GetTranslation";
 import { motion } from "framer-motion";
-import helloArray from "./helloArray"
+import helloArray from "./helloArray";
+import starYellow from "../../assets/starYellow.svg";
 
 function MainSearch() {
   const [ countryData, setCountryData] = useState({Name: "",
@@ -50,15 +51,33 @@ console.log(languages);
 };
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-body">
-      <div className="container mx-auto p-11 flex flex-col items-center lg:items-start">
+      <div className="container p-8 flex flex-col lg:items-start">
+      <motion.div
+          className="star-yellow"
+          style={{
+            background: `url(${starYellow})`,
+            width: '150px', // Adjust width to match your SVG width
+            height: '150px', // Adjust height to match your SVG height
+          }}
+          animate={{ rotate: -360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+        />
         <motion.h1
-          initial={{ opacity: 0, y: -200 }}
-          animate={{ opacity: 1, y: -100 }}
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1, }}
           transition={{ duration: 1 }}
-          className="text-white text-left mb-8 lg:mb-10 gap-9 text-7xl "
+          className="text-customOrange text-left mb-8 gap-9 lg:text-6xl md:text-5xl sm:text-4xl "
         >
           Search your location here.
         </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0, }}
+          animate={{ opacity: 1, }}
+          transition={{ duration: 1 }}
+          className="lg:text-4xl md:text-3xl sm:text-3xl text-white mb-8"
+        >
+          Let's embark on a search to uncover intriguing facts about a chosen country. As we journey through this exploration, we'll not only learn the local greeting but also gain insights into the heart of the nation through its capital, the size of its population, and the vastness of its land.
+        </motion.h2>
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-11 justify-center w-full">
           <GetTranslation className="mb-10 lg:mb-4" getCountryData={getCountryData} countryData={countryData} matchedLanguages={matchedLanguages}/>
           <div className="answer-section flex justify-center space-x-5">
