@@ -12,9 +12,13 @@ function App() {
     <>
       <Nav />
       <Header />
+    <div id="mainsearch">
       <MainSearch />
+      </div>
       <Divider />
+      <div id="quiz">
       <Quiz />
+      </div>
       <Divider />
       <Footer />
       {/* <DotSlider /> */}

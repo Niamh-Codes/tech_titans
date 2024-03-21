@@ -1,54 +1,54 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import AnswerCard from "./AnswerCard";
 import GetTranslation from "./GetTranslation";
 import { motion } from "framer-motion";
-import helloArray from "./helloArray";
+import helloArray from "./helloArray";;
 import starYellow from "../../assets/starYellow.svg";
 
 function MainSearch() {
-  const [ countryData, setCountryData] = useState({Name: "",
+  const [countryData, setCountryData] = useState({
+    Name: "",
     Capital: "",
     Population: "",
     Area: "",
     Region: "",
-    Languages: ""})
+    Languages: ""
+  });
+
   const [matchedLanguages, setMatchedLanguages] = useState([]);
+
   const getCountryData = (countryName) => {
     const url = `https://restcountries.com/v3.1/name/${countryName}`;
 
     fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error(`Failed to fetch country data: ${response.status}`);
-            }
-        })
-        .then(data => {
-          console.log(data);
-            const countryData1 = {
-                Name: data[0].name.common,
-                Capital: data[0].capital[0],
-                Population: data[0].population,
-                Area: data[0].area,
-                Region: data[0].region,
-                Languages: Object.values(data[0].languages).join(', ')
-            };
-setCountryData(countryData1)
-            const languages = countryData1.Languages.split(', ');
-console.log(languages);
-  
-// test (countryData1);
-    
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`Failed to fetch country data: ${response.status}`);
+        }
+      })
+      .then(data => {
+        const countryData1 = {
+          Name: data[0].name.common,
+          Capital: data[0].capital[0],
+          Population: data[0].population,
+          Area: data[0].area,
+          Region: data[0].region,
+          Languages: Object.values(data[0].languages).join(', ')
+        };
 
-            const matchedLanguages = helloArray.filter(item => languages.includes(item.language));
-            console.log(matchedLanguages);
-            setMatchedLanguages(matchedLanguages);
-        })
-        .catch(error => {
-            console.error(`Error occurred: ${error.message}`);
-        });
-};
+        setCountryData(countryData1);
+
+        const languages = countryData1.Languages.split(', ');
+        const matchedLanguages = helloArray.filter(item => languages.includes(item.language));
+        setMatchedLanguages(matchedLanguages);
+      })
+      .catch(error => {
+        console.error(`Error occurred: ${error.message}`);
+      });
+  };
+
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-body">
       <div className="container p-8 flex flex-col lg:items-start">
@@ -81,7 +81,9 @@ console.log(languages);
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-11 justify-center w-full">
           <GetTranslation className="mb-10 lg:mb-4" getCountryData={getCountryData} countryData={countryData} matchedLanguages={matchedLanguages}/>
           <div className="answer-section flex justify-center space-x-5">
-            <AnswerCard countryData={countryData}/>
+            {matchedLanguages.map((matchedLanguage, index) => (
+              <AnswerCard key={index} countryData={countryData} matchedLanguage={matchedLanguage} />
+            ))}
           </div>
         </div>
       </div>
