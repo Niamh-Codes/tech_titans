@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import logoPNG from "../../assets/logoPNG.png";
 
 const NavBar = () => {
   return (
     <nav className='text-customOrange bg-body py-2 lg:py-4 shadow-md dark:bg-neutral-700 flex items-center justify-between'>
       <div>
-        <img src='../../assets/helloCuriosvg.svg' alt='orange star logo' className="h-8 w-8 lg:h-10 lg:w-10 ml-2" />
+        <img src='../../assets/logoPNG.png' alt='orange star logo' className="h-8 w-8 lg:h-10 lg:w-10 ml-2" />
       </div>
       <ul className='flex gap-4 mr-3'>
         <li>
