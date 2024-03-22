@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import starOrange from './logo/starOrange.svg';
+import starOrange from '../logo/starOrange.svg';
 import './styles/Header.css'; 
 
 function Header() {
