@@ -1,5 +1,5 @@
 import React from "react";
-import "./AnswerCard.css";
+import "./styles/AnswerCard.css";
 
 function AnswerCard(props) {
     return (

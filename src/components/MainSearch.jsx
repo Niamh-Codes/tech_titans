@@ -57,8 +57,8 @@ function MainSearch() {
           className="star-yellow"
           style={{
             background: `url(${starYellow})`,
-            width: '150px', // Adjust width to match your SVG width
-            height: '150px', // Adjust height to match your SVG height
+            width: '150px', 
+            height: '150px',
           }}
           animate={{ rotate: -360 }}
           transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}

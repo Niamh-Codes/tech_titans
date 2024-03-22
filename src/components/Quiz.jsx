@@ -89,7 +89,6 @@ function Quiz() {
                 <h2 className="mb-4 text-xl lg:text-3xl md:text-3xl font-medium leading-tight text-center">{questions[currentQuestion].question}</h2>
               </div>
             </div>
-    
             <div className="container mx-auto mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
                 {questions[currentQuestion].incorrect_answers.map((answer, index) => (

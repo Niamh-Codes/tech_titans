@@ -3,18 +3,12 @@
   width: 30%;
   height: 254px;
   perspective: 1000px;
-  font-family: sans-serif;
+  font-family: Darker Grotesque sans-serif;
 }
 .flip-card-front p,
 .flip-card-back p {
-    font-size: 4vw; /* Adjust font size using viewport width */
-}
-
-.title {
-  font-size: 10px;
-  font-weight: 400;
-  text-align: center;
-  margin: 0;
+  font-family: Darker Grotesque;
+  font-size: 4vw;
 }
 
 .flip-card-inner {
