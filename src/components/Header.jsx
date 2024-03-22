@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import starOrange from './logo/starOrange.svg';
-import './styles/Header.css'; // Import the CSS file
+import './styles/Header.css'; 
 
 function Header() {
   return (
@@ -18,9 +18,11 @@ function Header() {
         <motion.div
           className="star-orange"
           style={{
-            background: `url(${starOrange})`,
-            width: '200px', // Adjust width to match your SVG width
-            height: '200px', // Adjust height to match your SVG height
+            backgroundImage: `url(${starOrange})`,
+            backgroundRepeat: 'no-repeat',
+            width: '200px',
+            height: '200px', 
+            transformOrigin: 'center',
           }}
           animate={{ rotate: 360 }}
           transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
@@ -37,10 +39,10 @@ function Header() {
         </motion.div>
       </div>
       <div className="flex flex-col lg:flex-row w-full mb-6">
-        <div className="w-2/5 mb-2 lg:mb-0 mr-10"> {/* Add margin bottom for separation on large screens */}
+        <div className="w-2/5 mb-2 lg:mb-0 mr-10"> 
           <div className="line"></div>
         </div>
-        <div className="w-full lg:w-1/2 flex flex-col justify-center lg:pl-6"> {/* Adjust width for full width on small screens */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center lg:pl-6"> 
           <motion.p
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

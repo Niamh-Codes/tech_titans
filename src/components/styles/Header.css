@@ -5,15 +5,15 @@
   margin-bottom: 60px;
 }
 
-.star-orange {
+/* .star-orange {
   width: 200px;
   height: 200px;
   background: url('../../assets/starOrange.svg');
   background-size: cover;
-  z-index: -1;
-  right: 200;
+  /* z-index: -1; */
+  /* right: 200;
   top:200;
-}
+} */ */
 
 .subtitle {
   max-height: fit-content;

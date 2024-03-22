@@ -50,14 +50,14 @@ function MainSearch() {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-body">
+    <div className="flex flex-col justify-center items-center bg-body">
       <div className="container flex flex-col lg:items-start p-4">
       <motion.div
           className="star-yellow"
           style={{
             background: `url(${starYellow})`,
-            width: '150px', // Adjust width to match your SVG width
-            height: '150px', // Adjust height to match your SVG height
+            width: '150px', 
+            height: '150px',
           }}
           animate={{ rotate: -360 }}
           transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}

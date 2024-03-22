@@ -17,7 +17,7 @@ const GetTranslation = (props) => {
         {props.matchedLanguages.map((match,index) => (
           <div key={index} className="translation-container flex flex-col items-center justify-center p-4 mb-4 rounded-lg shadow">
             <h2 className="text-3xl mb-2">Language(s) spoken: {match.language}</h2>
-            <p className="text-2xl">Hello: {match.hello}</p>
+            <p className="text-3xl">Hello: {match.hello}</p>
           </div>
         ))}
       </div>
