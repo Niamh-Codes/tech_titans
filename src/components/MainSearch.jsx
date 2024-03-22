@@ -3,7 +3,9 @@ import AnswerCard from "./AnswerCard";
 import GetTranslation from "./GetTranslation";
 import { motion } from "framer-motion";
 import helloArray from "./helloArray";
-import starYellow from "../../assets/starYellow.svg";
+// import starYellow from "../../assets/starYellow.svg";
+import starYellow from "./starYellow.svg";
+
 
 function MainSearch() {
   const [countryData, setCountryData] = useState({
