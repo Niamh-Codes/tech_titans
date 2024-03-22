@@ -29,12 +29,11 @@ Using Curio is simple:
 
 ## Deployed Link 
 
-https://hellocurio.netlify.app/
+<https://hellocurio.netlify.app/>
 
 ## Screenshot
 
 ![Screenshot (176)](https://github.com/Niamh-Codes/tech_titans/assets/151567906/18fa0ea4-c0cd-41bf-a3de-7d2b715589be)
-
 
 ## Feedback
 
