@@ -1,5 +1,5 @@
 import React from "react";
-// import helloCuriosvg from '../../assets/helloCuriosvg.svg'
+import helloCuriosvg from '../../assets/helloCuriosvg.svg';
 import "./Navbar.css";
 
 function Navbar() {
@@ -11,7 +11,7 @@ function Navbar() {
       >
         <div className="container mx-auto px-3 lg:px-0 flex items-center justify-between">
           <img
-            src="../../assets/helloCuriosvg.svg"
+            src={helloCuriosvg}
             alt="orange star logo"
             className="h-8 w-8 lg:h-10 lg:w-10 ml-2"
           />
@@ -87,3 +87,5 @@ export default Navbar;
     </button>
   </div>
 </nav>;
+
+
