@@ -27,6 +27,14 @@ Using Curio is simple:
 3. **Explore**: Dive into the wealth of information Curio provides, from language translations to country details and quiz games.
 4. **Enjoy Your Journey**: Armed with knowledge and confidence, embark on your journey with Curio as your trusted companion.
 
+## Deployed Link 
+
+https://hellocurio.netlify.app/
+
+## Screenshot
+
+
+
 ## Feedback
 
 We're constantly striving to improve Curio and make it the best travel app available. If you have any feedback, suggestions, or encounter any issues while using Curio, please don't hesitate to reach out to us. Your input is invaluable in helping us enhance the Curio experience for all users.
